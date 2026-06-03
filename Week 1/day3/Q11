@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int a,b, max=0;
+    cout<<"Enter the first number: ";
+    cin>>a;
+    cout<<"Enter the second number: ";
+    cin>>b;
+    for(int i=1;i<=(a>b?b:a);i++)
+    {
+        if(a%i==0&&b%i==0)
+        max=i;
+    }
+    cout<<max<<" is the GCD of "<<a<<" and "<<b;
+
+    return 0;
+}
