@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int n, d, a=0,t,s=0;
+    cout<<"Enter the number : ";
+    cin>>n;
+    t=n;
+    while(n>0)
+    {
+        d=n%10;
+        a++;
+        n=n/10;
+    }
+    n=t;
+    while(n>0)
+    {
+        d=n%10;
+        s=s+pow(d,a);
+        n=n/10;
+    }
+    if(s==t)
+    cout<<t<<" is armstrong number";
+    else
+    cout<<t<<" is not an armstrong number";
+    return 0;
+}
