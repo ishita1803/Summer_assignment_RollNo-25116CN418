@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int n, first, second, third;
+    cout<<"Enter the number of terms : ";
+    cin>>n;
+    if(n==0)
+    cout<<"Try entering more terms";
+    else if(n==1)
+    cout<<"0";
+    else if(n==2)
+    cout<<"0 1";
+    else if(n>2)
+    {
+        first=0;
+        second=1;
+        cout<<"0\t1\t";
+        for(int i=1;i<=n-2;i++)
+        {
+            third=first+second;
+            cout<<third<<"\t";
+            first=second;
+            second=third;
+
+        }
+
+    }
+    return 0;
+}
