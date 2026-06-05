@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int n,f=1,d,t,s=0;
+    cout<<"Enter the number: ";
+    cin>>n;
+    t=n;
+    while(n!=0)
+    {
+        f=1;
+        d=n%10;
+        for(int i=1;i<=d;i++)
+        {
+            f=f*i;
+        }
+        s=s+f;
+        n=n/10;
+    }
+    if(t==s)
+    cout<<t<<" is a strong number";
+    else
+    cout<<t<<" is not a strong number";
+return 0;
+}
