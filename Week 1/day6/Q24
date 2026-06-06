@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n=1, result=1,x;
+    cout<<"Enter the number";
+    cin>>x;
+    cout<<"Enter a the power: ";
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        result=result*x;
+    }
+    
+
+    cout<<"Result="<<result;
+
+    return 0;
+}
