@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool arm(int a)
+{
+    int d,s=0,t=a,count=0;
+    while(a>0)
+    {
+        d=a%10;
+        count++;
+        a=a/10;
+    }
+    a=t;
+    while(a>0)
+    {
+        d=a%10;
+        s+=pow(d, count);
+        a=a/10;
+    }
+    if(t==s)
+    return true;
+    else
+    return false;
+}
+int main()
+{
+    int a;
+    cout<<"Enter the number: ";
+    cin>>a;
+    if(arm(a))
+    cout<<a<<" is a armstrong number";
+    else
+    cout<<a<<" is not a armstrong number";
+    return 0;
+}
