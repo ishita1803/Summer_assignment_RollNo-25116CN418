@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool perf(int a)
+{
+    int s=1;
+    for(int i=2;i<=sqrt(a);i++)
+    {
+        if(a%i==0)
+        {
+             s+=i+(a/i);
+        }
+    }
+    if(s==a)
+    return true;
+    else
+    return false;    
+}
+int main()
+{
+    int a;
+    cout<<"Enter the number: ";
+    cin>>a;
+    if(perf(a))
+    cout<<a<<" is a perfect number";
+    else
+    cout<<a<<" is not a perfect number";
+    return 0;
+}
