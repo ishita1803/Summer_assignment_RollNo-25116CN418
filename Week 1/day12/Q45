@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool palin(int a)
+{
+    int d,s=0,t=a;
+    while(a>0)
+    {
+        d=a%10;
+        s=s*10+d;
+        a=a/10;
+    }
+    if(t==s)
+    return true;
+    else
+    return false;
+}
+int main()
+{
+    int a;
+    cout<<"Enter the number: ";
+    cin>>a;
+    if(palin(a))
+    cout<<a<<" is a palindrome number";
+    else
+    cout<<a<<" is not a palindrome number";
+    return 0;
+}
