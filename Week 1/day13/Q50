@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,sum=0;
+    float avg;
+    cout<<"Enter the total elements in array: ";
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"\nEnter the value for a["<<i<<"]: ";
+        cin>>a[i];
+        sum=sum+a[i];
+    }
+    avg=sum*1.0/n;
+    cout<<"Sum: "<<sum;
+    cout<<"\nAverage: "<<avg;
+    return 0;
+}
