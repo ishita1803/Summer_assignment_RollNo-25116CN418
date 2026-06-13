@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter the total elements in array: ";
+    cin >> n;
+    int a[n];
+    for(int i=0; i<n; i++)
+    {
+        cout << "\nEnter the value for a[" << i << "]: ";
+        cin >> a[i];
+    }
+    int max, smax;
+
+    if(a[0] > a[1])
+    {
+        max = a[0];
+        smax = a[1];
+    }
+    else
+    {
+        max = a[1];
+        smax = a[0];
+    }
+
+    for(int i=2; i<n; i++)
+    {
+        if(a[i] > max)
+        {
+            smax = max;
+            max = a[i];
+        }
+        else if(a[i] > smax && a[i] != max)
+        {
+            smax = a[i];
+        }
+    }
+
+    cout << "Largest: " << max;
+    cout << "\nSecond Largest: " << smax;
+
+    return 0;
+}
