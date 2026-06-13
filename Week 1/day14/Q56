@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter the total elements in array: ";
+    cin >> n;
+
+    int a[n];
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << "Enter a[" << i << "]: ";
+        cin >> a[i];
+    }
+
+    cout << "Duplicate elements are: ";
+
+    for(int i = 0; i < n; i++)
+    {
+        bool duplicate = false;
+
+        for(int k = 0; k < i; k++)
+        {
+            if(a[i] == a[k])
+            {
+                duplicate = true;
+                break;
+            }
+        }
+
+        if(duplicate)
+            continue;
+
+        for(int j = i + 1; j < n; j++)
+        {
+            if(a[i] == a[j])
+            {
+                cout << a[i] << " ";
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
